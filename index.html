@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="./css/index.css" />
+		<script defer src="./index.js"></script>
+		<title>Транслит</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="main">
+				<div class="header">
+					<h1>T.R.A.N.S.L.I.T.</h1>
+				</div>
+
+				<div class="inputBlock">
+					<div class="input">
+						<input
+							type="text"
+							placeholder="Начните вводить текст"
+						/>
+					</div>
+
+					<div class="addButton">
+						<button>Добавить</button>
+					</div>
+				</div>
+
+				<div class="dictionary">
+					<div class="line" id="firstLine">
+						<div class="leftSide">
+							<div class="number">
+								<p>1</p>
+							</div>
+
+							<div class="russianWord">
+								<p>Привет</p>
+							</div>
+						</div>
+
+						<div class="rightSide">
+							<div class="englishWord">
+								<p id="engWord">Privet</p>
+							</div>
+
+							<div class="cancelButton">
+								<button>
+									<img src="./icons/cancelIcon.svg" alt="" />
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="removeAll">
+					<div class="cancelIcon">
+						<img src="./icons/cancelIcon.svg" alt="" />
+					</div>
+
+					<div class="textRemoveAll">
+						<p>Очистить всё</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

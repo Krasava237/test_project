@@ -1,0 +1,290 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.container * {
+    align-self: center;
+    align-items: center;
+}
+
+.header h1{
+    margin-top: 44px;
+    margin-bottom: 86px;
+
+    color: #4520AB;
+    font-size: 40px;
+    font-family: IBM Plex Mono;
+    font-weight: 600;
+}
+
+.inputBlock {
+    width: 500px;
+    height: 56px;
+    margin-bottom: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    border-radius: 14px;
+    border: 2px #111111 solid;
+}
+
+.input, .addButton{
+    padding: 0px 10px;
+}
+
+.input input {
+    font-size: 18px;
+    width: 225px;
+    border-width: 0px;  
+}
+
+.input input::placeholder {
+    height: 100%;
+    opacity: 0.40;
+    color: #111111;
+    font-size: 18px;
+    font-family: IBM Plex Mono;
+    font-weight: 400;
+    word-wrap: break-word 
+}
+
+.input input:focus {
+    outline: none;
+}
+
+.addButton button {
+    width: min-content;
+    height: min-content;
+    padding-bottom: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background: #111111;
+    border-radius: 8px;
+
+    color: white;
+    font-size: 18px;
+    font-family: IBM Plex Mono;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.dictionary {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 8px;
+    min-height: min-content;
+    margin-bottom: 60px;
+}
+
+.line, .leftSide, .rightSide {
+    display: flex;
+}
+
+.line {
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 500px;
+}
+
+.leftSide, .rightSide {
+    width: 250px;
+    height: 40px;
+
+    box-sizing: border-box;
+}
+
+.leftSide *, .rightSide * {
+    display: flex;
+    align-self: center;
+}
+
+.russianWord p, .englishWord p {
+    color: #111111;
+    font-size: 18px;
+    font-family: IBM Plex Mono;
+    font-weight: 400;
+    line-height: 40px;
+    word-wrap: break-word 
+}
+
+.russianWord {
+    padding-left: 10px;
+}
+
+.englishWord {
+    padding-left: 20px;
+}
+
+.number {
+    padding: 10px;
+
+    color: #111111;
+    font-size: 14px;
+    font-family: IBM Plex Mono;
+    font-weight: 600;
+    line-height: 40px;
+    word-wrap: break-word 
+}
+
+.cancelButton {
+    padding-right: 10px;
+}
+
+.leftSide {
+    background: #F0F0F0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px; /*TODO interactive*/
+    border-right: 2px #111111 solid;
+    position: relative;
+}
+
+.shortText {
+    color: #111111;
+    font-size: 16px;
+    font-family: IBM Plex Mono;
+    font-weight: 400;
+    line-height: 20px;
+    word-wrap: break-word;
+    padding: 10px;
+    
+    display: none;
+
+    position: absolute;
+    left: 35px;
+    bottom: 15px;
+    border-radius: 10px;
+    background: #FFF; 
+    max-width: 200px;
+    width: max-content;
+    height: min-content;
+    word-wrap: break-word;
+}
+
+.leftSide:hover .shortText {
+    display: block;
+}
+
+.rightSide:hover .shortText {
+    display: block;
+}
+
+.rightSide {
+    justify-content: space-between;
+
+    background-color: rgba(0, 0, 0, 0.10);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px; /*TODO interactive*/
+    position: relative;
+}
+
+.rightSide .shortText {
+    left: 15px;
+}
+
+.cancelButton button {
+    border: 0px;
+    background: none;
+}
+
+.removeAll {
+    display: flex;
+    justify-content: space-between;
+
+    width: 176px;
+    height: 38px;
+    border-radius: 8px;
+    background-color: #ADADAD;
+}
+
+.cancelIcon, .textRemoveAll {
+    display: flex;
+    align-self: center;
+}
+
+.cancelIcon {
+    padding-left: 10px;
+}
+
+.textRemoveAll {
+    padding-right: 10px;
+}
+
+.removeAll p {
+    color: #0F0F0F;
+    font-size: 18px;
+    font-family: IBM Plex Mono;
+    font-weight: 400;
+    word-wrap: break-word 
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .header * {
+        flex-wrap: nowrap;
+    }
+
+    .header h1 {
+        font-size: 36px;
+        width: 308px;
+        height: 47px;
+
+        margin-bottom: 76px;
+    }
+
+    .inputBlock {
+        width: 328px;
+        
+        margin-bottom: 50px;
+    }
+
+    .inputBlock * {
+        padding: 0px;
+    }
+
+    .input input {
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 225px;
+        height: 24.64px;
+        font-size: 15px;
+    }
+
+    .addButton {
+        justify-content: center;
+        align-content: center;
+        display: flex;
+        width: 107px;
+        height: 38px;
+        margin-right: 4px;
+    }
+
+    .addButton button {
+        padding: 0px;
+        width: 100%;
+        padding-right: 0px;
+    }
+
+    .dictionary {
+        width: 328px;
+
+        margin-bottom: 40px;
+    }
+
+    .leftSide, .rightSide {
+        width: 172px;
+    }
+
+    .removeAll {
+        width: 176px;
+        height: 38px;
+    }
+    
+}
